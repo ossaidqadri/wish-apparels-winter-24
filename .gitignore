@@ -1,7 +1,7 @@
 # Windows Zone Identifier files
 *:Zone.Identifier
 CLAUDE.md
-
+.claude
 # OS Files
 .DS_Store
 .DS_Store?

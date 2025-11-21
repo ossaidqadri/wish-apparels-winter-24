@@ -117,9 +117,9 @@ product-info {
 .shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   color: rgb(var(--color-button-text));
-  font-size: 1.4rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
-  letter-spacing: 0.07rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
 }
 
 .shopify-payment-button__button--unbranded::selection {
@@ -133,9 +133,9 @@ product-info {
 
 .shopify-payment-button__more-options {
   margin: 1.6rem 0 1rem;
-  font-size: 1.2rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.05rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
@@ -153,9 +153,9 @@ product-info {
 .product-form__error-message-wrapper:not([hidden]) {
   display: flex;
   align-items: flex-start;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  letter-spacing: 0.04rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
   margin-bottom: 1.5rem;
 }
 
@@ -211,8 +211,8 @@ product-info {
 }
 
 .shopify-payment-button__button {
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+  font-size: 13px;
+  letter-spacing: 0.06rem;
 }
 
 /* Product info */
@@ -293,7 +293,7 @@ a.product__text {
   }
 
   .product__info-container .price--on-sale .price-item--regular {
-    font-size: 1.6rem;
+    font-size: 13px;
   }
 
   .product__info-container > *:first-child {
@@ -847,7 +847,7 @@ a.product__text {
 }
 
 .product-popup-modal__button {
-  font-size: 1.6rem;
+  font-size: 13px;
   padding-right: 1.3rem;
   padding-left: 0;
   min-height: 4.4rem;
@@ -1391,7 +1391,7 @@ a.product__text {
 
 .recipient-checkbox {
   flex-grow: 1;
-  font-size: 1.6rem;
+  font-size: 13px;
   display: flex;
   word-break: break-word;
   align-items: flex-start;
@@ -1465,7 +1465,7 @@ a.product__text {
 }
 
 .recipient-form ul {
-  line-height: calc(1 + 0.6 / var(--font-body-scale));
+  line-height: 1.2;
   padding-left: 4.4rem;
   text-align: left;
 }

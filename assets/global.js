@@ -743,10 +743,19 @@ class SliderComponent extends HTMLElement {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+
+    // Fix for NaN/Infinity when sliderItemOffset is 0 or invalid
+    if (!this.sliderItemOffset || this.sliderItemOffset <= 0) {
+      this.sliderItemOffset = this.sliderItemsToShow[0].clientWidth || 1;
+    }
+
     this.slidesPerPage = Math.floor(
       (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
     );
-    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+
+    // Ensure slidesPerPage is valid
+    this.slidesPerPage = Math.max(1, Math.min(this.slidesPerPage, this.sliderItemsToShow.length));
+    this.totalPages = Math.max(1, this.sliderItemsToShow.length - this.slidesPerPage + 1);
     this.update();
   }
 
@@ -763,9 +772,14 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
+    // Ensure currentPage is valid (fix for NaN)
+    if (!isFinite(this.currentPage) || this.currentPage < 1) {
+      this.currentPage = 1;
+    }
+
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-      this.pageTotalElement.textContent = this.totalPages;
+      this.pageTotalElement.textContent = this.totalPages || 1;
     }
 
     if (this.currentPage != previousPage) {

@@ -40,6 +40,9 @@
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <!-- Special Injected -->
 
+    <!-- Custom Fonts: Nimbus Sans (Self-Hosted) -->
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -105,6 +108,7 @@
       }
 
       :root {
+        /* Original Shopify font variables */
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -116,6 +120,17 @@
 
         --font-body-scale: {{ settings.body_scale| times: 0.8 | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1 | divided_by: settings.body_scale }};
+
+        /* California Arts Override - Nimbus Sans */
+        --font-body-family: 'nimbus-sans' !important;
+        --font-body-style: normal !important;
+        --font-body-weight: 400 !important;
+        --font-body-weight-bold: 700 !important;
+        --font-heading-family: 'nimbus-sans' !important;
+        --font-heading-style: normal !important;
+        --font-heading-weight: 400 !important;
+        --font-body-scale: 1.3 !important;
+        --font-heading-scale: 1.0 !important;
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};

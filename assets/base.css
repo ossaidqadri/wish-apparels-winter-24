@@ -245,13 +245,25 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   background-color: rgba(var(--color-foreground), 0.2);
 }
 
-.text-body {
-  font-size: 1rem;
+/* Override fonts globally - California Arts styling */
+* {
+  font-family: 'nimbus-sans' !important;
+}
+
+body {
+  font-family: 'nimbus-sans';
+  font-size: 13px;
+  line-height: 1.2;
   letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
+}
+
+.text-body {
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
 }
 
 h1,
@@ -259,111 +271,122 @@ h2,
 h3,
 h4,
 h5,
+h6,
 .h0,
 .h1,
 .h2,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
   color: rgb(var(--color-foreground));
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  line-height: 1.2;
   word-break: break-word;
 }
 
+/* California Arts heading sizes - compact and minimal */
 .hxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
-  line-height: 1.1;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
+    font-size: 13px;
   }
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: 13px;
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: 13px;
   }
 }
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: 13px;
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: 10.4px;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: 10.4px;
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: 13px;
   }
 }
 
 h4,
 .h4 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-size: 13px;
   }
 }
 
 h6,
 .h6 {
+  font-size: 13px;
+  line-height: 1.2;
   color: rgba(var(--color-foreground), 0.75);
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 blockquote {
   font-style: italic;
+  font-size: 13px;
+  line-height: 1.2;
   color: rgba(var(--color-foreground), 0.75);
   border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
   padding-left: 1rem;
@@ -376,32 +399,34 @@ blockquote {
 }
 
 .caption {
-  font-size: 1rem;
-  letter-spacing: 0.07rem;
-  line-height: calc(1 + 0.7 / var(--font-body-scale));
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
 }
 
 @media screen and (min-width: 750px) {
   .caption {
-    font-size: 1.2rem;
+    font-size: 13px;
   }
 }
 
 .caption-with-letter-spacing {
-  font-size: 1rem;
-  letter-spacing: 0.13rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .caption-with-letter-spacing--medium {
-  font-size: 1.2rem;
-  letter-spacing: 0.16rem;
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
 }
 
 .caption-with-letter-spacing--large {
-  font-size: 1.4rem;
-  letter-spacing: 0.18rem;
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
 }
 
 .caption-large,
@@ -410,9 +435,10 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
+  font-family: 'nimbus-sans';
 }
 
 .color-foreground {
@@ -422,7 +448,9 @@ blockquote {
 table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;
-  font-size: 1.4rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   border-style: hidden;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
   /* draws the table border  */
@@ -498,8 +526,9 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
-  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
 }
 
 .link--text {
@@ -512,9 +541,11 @@ h6:empty {
 
 .link-with-icon {
   display: inline-flex;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
+  font-weight: 400;
+  letter-spacing: 0.06rem;
   text-decoration: none;
   margin-bottom: 4.5rem;
   white-space: nowrap;
@@ -866,20 +897,23 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-size: 13px;
+  line-height: 1.2;
   letter-spacing: 0.06rem;
+  font-family: 'nimbus-sans';
   color: rgba(var(--color-foreground), 0.7);
 }
 
 .subtitle--small {
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
 }
 
 .subtitle--medium {
-  font-size: 1.6rem;
-  letter-spacing: 0.08rem;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
 }
 
 /* component-grid */
@@ -1222,10 +1256,14 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: 0;
+  border-radius: 0;
   padding: 0 3rem;
   cursor: pointer;
-  font: inherit;
-  font-size: 1.5rem;
+  font-family: 'nimbus-sans';
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
@@ -1307,13 +1345,15 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  font-size: 13px;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
 }
 
 .button--tertiary {
-  font-size: 1.2rem;
+  font-size: 13px;
+  line-height: 1.2;
   padding: 1rem 1.5rem;
   min-width: calc(9rem + var(--buttons-border-width) * 2);
   min-height: calc(3.5rem + var(--buttons-border-width) * 2);
@@ -1395,7 +1435,9 @@ shopify-accelerated-checkout-cart {
 }
 
 .share-button__button {
-  font-size: 1.4rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   display: flex;
   align-items: center;
   color: rgb(var(--color-link));
@@ -1578,10 +1620,11 @@ details[open] > .share-button__fallback {
   appearance: none;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
-  font-size: 1.6rem;
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
@@ -1631,10 +1674,11 @@ details[open] > .share-button__fallback {
 }
 
 .select__select {
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -1697,7 +1741,7 @@ details[open] > .share-button__fallback {
 .select__select,
 .customer select {
   cursor: pointer;
-  line-height: calc(1 + 0.6 / var(--font-body-scale));
+  line-height: 1.2;
   padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem;
   margin: var(--inputs-border-width);
   min-height: calc(var(--inputs-border-width) * 2);
@@ -1731,7 +1775,9 @@ details[open] > .share-button__fallback {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   left: calc(var(--inputs-border-width) + 2rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
@@ -1739,8 +1785,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
-  letter-spacing: 0.1rem;
-  line-height: 1.5;
+  letter-spacing: 0.06rem;
 }
 
 .field__input:focus ~ .field__label,
@@ -1749,10 +1794,11 @@ details[open] > .share-button__fallback {
 .customer .field input:focus ~ label,
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
-  font-size: 1rem;
+  font-size: 13px;
+  line-height: 1.2;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.06rem;
 }
 
 .field__input:focus,
@@ -1806,9 +1852,11 @@ details[open] > .share-button__fallback {
 /* Text area */
 
 .text-area {
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
   min-height: 10rem;
   resize: none;
 }
@@ -1829,17 +1877,20 @@ input[type='checkbox'] {
 .form__message {
   align-items: center;
   display: flex;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   margin-top: 1rem;
 }
 
 .form__message--large {
-  font-size: 1.6rem;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .customer .field .form__message {
-  font-size: 1.4rem;
+  font-size: 13px;
+  line-height: 1.2;
   text-align: left;
 }
 
@@ -1864,7 +1915,9 @@ input[type='checkbox'] {
 
 .form-status {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
 }
 
 .form-status-list {
@@ -1922,11 +1975,11 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-family: 'nimbus-sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
   opacity: 0.85;
   text-align: center;
   background-color: transparent;
@@ -1941,7 +1994,9 @@ input[type='checkbox'] {
 .quantity__button {
   width: calc(4.5rem / var(--font-body-scale));
   flex-shrink: 0;
-  font-size: 1.8rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -2003,7 +2058,9 @@ input[type='checkbox'] {
 .quantity__rules {
   margin-top: 0.5rem;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
 }
 
 .quantity__rules .caption {
@@ -2090,10 +2147,11 @@ input[type='checkbox'] {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 13px;
+  line-height: 1.2;
+  font-family: 'nimbus-sans';
   bottom: 0.8rem;
   left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
 /* utility-bar */
@@ -2212,7 +2270,7 @@ input[type='checkbox'] {
 
 .utility-bar .localization-wrapper .disclosure .localization-form__select,
 .utility-bar .localization-wrapper .disclosure__link {
-  font-size: calc(var(--font-heading-scale) * 1.3rem);
+  font-size: 13px;
 }
 
 @media screen and (min-width: 990px) {
@@ -2678,7 +2736,7 @@ details[open] .modal-overlay::after {
   width: 100%;
   height: 100%;
   padding: 0 5rem 0 1rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  line-height: 1.2;
   position: relative;
 }
 
@@ -2927,9 +2985,10 @@ details-disclosure > details {
   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
+  font-size: 13px;
+  font-family: 'nimbus-sans';
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
   padding: 0.5rem 1.3rem 0.6rem 1.3rem;
   text-align: center;
   background-color: rgb(var(--color-badge-background));

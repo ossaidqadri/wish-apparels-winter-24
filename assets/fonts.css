@@ -1,0 +1,39 @@
+/**
+ * Nimbus Sans Font Face Declarations
+ * Self-hosted fonts for Wish Apparels
+ * Matching California Arts typography
+ */
+
+/* Nimbus Sans Regular (400) */
+@font-face {
+  font-family: 'nimbus-sans';
+  src: url('{{ "fonts/nimbus-sans/nimbus-sans-regular.otf" | asset_url }}') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nimbus-sans';
+  src: url('{{ "fonts/nimbus-sans/nimbus-sans-regular-italic.otf" | asset_url }}') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Nimbus Sans Bold (700) */
+@font-face {
+  font-family: 'nimbus-sans';
+  src: url('{{ "fonts/nimbus-sans/nimbus-sans-bold.otf" | asset_url }}') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nimbus-sans';
+  src: url('{{ "fonts/nimbus-sans/nimbus-sans-bold-italic.otf" | asset_url }}') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
