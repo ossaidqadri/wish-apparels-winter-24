@@ -1,4 +1,4 @@
-<img src="https://socialify.git.ci/ossaidqadri/wish-apparels-winter-24/image?custom_description=Production-ready+Shopify+theme+built+with+Tailwind+CSS%2C+Bun%2C+and+modern+development+tools.+&description=1&font=KoHo&forks=1&language=1&name=1&owner=1&pattern=Charlie+Brown&stargazers=1&theme=Auto" alt="wish-apparels-winter-24" width="640" height="320" />
+<img src="https://socialify.git.ci/ossaidqadri/wish-apparels-winter-24/image?custom_description=&description=1&font=KoHo&forks=1&language=1&name=1&owner=1&pattern=Charlie+Brown&stargazers=1&theme=Auto" alt="wish-apparels-winter-24" width="640" height="320" />
 
 [![Shopify Liquid](https://img.shields.io/badge/Shopify_Liquid-3.0-96bf47?style=flat-square&logo=shopify)](https://shopify.dev/docs/themes/liquid)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3)](https://www.w3.org/Style/CSS/)
